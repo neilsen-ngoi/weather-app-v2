@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weather app v2</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>What's the weather like around the world?</h1>
+        <form action="" id="search-form">
+          <label for="search-term">Search the city or area</label>
+          <div class="form-row">
+            <input
+              type="text"
+              placeholder="e.g Kuala Lumpur"
+              name="search-term"
+              id="search-term"
+              autofocus
+            />
+            <button type="submit">
+              <img src="images/plus-circle.svg" alt="plus-circle" />
+            </button>
+          </div>
+          <p class="form-msg">dsdsdsd</p>
+        </form>
+      </header>
+
+      <section>
+        <ul class="cities"></ul>
+      </section>
+      <footer>
+        <small><p>Coded by Neil</p></small>
+      </footer>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
