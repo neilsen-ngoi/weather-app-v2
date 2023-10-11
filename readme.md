@@ -1,4 +1,7 @@
-JavaScript/n
-HTML/n
-CSS/n
-make a commit/n
+JavaScript  
+HTML  
+
+CSS  
+
+make a commit  
+
