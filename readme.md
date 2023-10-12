@@ -1,5 +1,6 @@
+Tech used:
 JavaScript  
 HTML  
 CSS  
-make a commit  
+
 
