@@ -6,7 +6,7 @@ const input = document.querySelector('#search-term')
 const msg = document.querySelector('.form-msg')
 const list = document.querySelector('.cities')
 
-// Get your OpenWeather API key: https://home.openweathermap.org/users/sign_up
+// Get your OpenWeather API key
 const apiKey = '16fac2d6ca1dae2bceaacfcd51d27d0c'
 
 form.addEventListener('submit', (e) => {
