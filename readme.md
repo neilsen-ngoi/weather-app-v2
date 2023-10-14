@@ -3,4 +3,6 @@ JavaScript
 HTML  
 CSS  
 
+Typescript
+
 
