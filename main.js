@@ -1,111 +1,4 @@
-// // DOM
-// const form = document.querySelector('#search-form')
-// const input = document.querySelector('#search-term')
-// const msg = document.querySelector('.form-msg')
-// const list = document.querySelector('.cities')
 
-// // api
-// const apiKey = '4d8fb5b93d4af21d66a2948710284366'
-
-// form.addEventListener('submit', (e) => {
-//   //prevent page reload on submit button click
-//   e.preventDefault()
-//   //reset search box after submit button click
-//   msg.textContent = ''
-//   msg.classList.remove('visible')
-
-//   let inputVal = input.value
-
-//   //check if city already matches search
-//   const listItemsArray = Array.from(list.querySelectorAll('.cities li'))
-
-//   if (listItemsArray.length > 0) {
-//     const filteredArray = listItemsArray.filter((el) => {
-//       let content = ''
-//       let cityName = el.querySelector('city_name').textContent.toLowerCase()
-//       let cityCountry = el
-//         .querySelector('city_country')
-//         .textContent.toLowerCase()
-
-//       // check for city,country format
-//       if (inputVal.includes(',')) {
-//         //if city valid, country invalid
-//         if (inputVal.split(',')[1].length > 2) {
-//           //city code only 2 char long, longer than 2 = error
-//           inputVal = inputVal.split(',')[0] //take element at position 0 as input
-//           content = cityName
-//         } else {
-//           //if both are valid
-//           content = `${cityName},${cityCountry}`
-//         }
-//       } else {
-//         //if format is city no comma
-//         content = cityName
-//       }
-//       // return true or false if input matches existing search
-//       return content == inputVal.toLowerCase()
-//     })
-//     // if filteredArray !blank we have a previous search that matchs, show msg and exit
-//     if (filteredArray.length > 0) {
-//       msg.textContent = `weather for ${
-//         filteredArray[0].querySelector('.city_name').textContent
-//       } already displayed, try another search`
-//       msg.classList.add('visible')
-
-//       form.reset()
-//       input.focus()
-
-//       return
-//     }
-//   }
-//   //ajax request
-//   const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`
-
-//   fetch(url)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       console.log(data)
-
-//       if (data.cod == '404') {
-//         throw new Error(`${data.cod}, ${data.message}`)
-//       }
-
-//       // deconstructing the recieved obj from weathermap into what we need
-//       const { main, name, sys, weather } = data
-
-//       const icon = `images/weather/${weather[0]['icon']}.svg`
-
-//       const li = document.createElement('li')
-
-//       const markup = `
-//         <figure>
-//             <img src="${icon}" alt="${weather[0]['description']}" />
-//         </figure>
-//         <div>
-//               <h2>${Math.round(main.temp)}<sup>°C</sup></h2>
-//               <p class="city_conditions">${weather[0][
-//                 'description'
-//               ].toUpperCase()}</p>
-//               <h3>
-//                 <span class="city_name">${name}</span
-//                 ><span class="city_country">${sys.country}</span>
-//               </h3>
-//       </div>
-//       `
-
-//       li.innerHTML = markup
-
-//       list.appendChild(li)
-//     })
-//     .catch(() => {
-//       msg.textContent = 'please type in a valid city'
-//       msg.classList.add('visible')
-//     })
-
-//   msg.textContent = ''
-//   form.reset()
-//   input.focus()
-// })
 
 // DOM elements
 const form = document.querySelector('#search-form')
@@ -113,7 +6,7 @@ const input = document.querySelector('#search-term')
 const msg = document.querySelector('.form-msg')
 const list = document.querySelector('.cities')
 
-// Get your OpenWeather API key: https://home.openweathermap.org/users/sign_up
+// Get your OpenWeather API key
 const apiKey = '16fac2d6ca1dae2bceaacfcd51d27d0c'
 
 form.addEventListener('submit', (e) => {
